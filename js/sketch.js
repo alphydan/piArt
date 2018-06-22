@@ -1,6 +1,6 @@
 function setup() {
     // put setup code here
-    createCanvas(1200,800);
+    createCanvas(window.innerWidth, window.innerHeight);
     noStroke();
     frameRate(10);
 }
@@ -10,15 +10,22 @@ function draw() {
     // put drawing code here
     background(0);
 
+
     boom = random(100);
     boost = 0;
     if (boom <= 20){
 	boost = boom
     }
-    change = (window.temp-900)/2
+    change = (window.temp-1200)/2
     fill(255,255-change,255-change);
-    ellipse(500,300,200+change*random(1)/10, 200+change*random(1)/10)
+    ellipse(500,300,100+1.2*change+random(1)/3, 100+1.2*change+random(1)/3)
     console.log( window.temp)
+
+    // Text
+    fill(0,102, 153);
+    textSize(32);
+    text('H', 490, 310);
+
 
 }
 

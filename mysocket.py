@@ -17,12 +17,12 @@ async def time(websocket, path):
         humidity_pi = sense.humidity
         temp_pi = str(sense.temp)
         humidity_value = str(200 * humidity_pi / 10)
-        orientation_rad = sense.get_orientation_radians()
-        print(orientation_rad)
+        # orientation_rad = sense.get_orientation_radians()
+        
         # foo = [x for x in range(192)]
         # now = str(random.choice(foo))
-        now = orientation_rad
-        # now = temp_pi
+        # now = orientation_rad
+        now = humidity_value
         # now = datetime.datetime.utcnow().isoformat() + 'Z'
         await websocket.send(now)
         await asyncio.sleep(0.1)

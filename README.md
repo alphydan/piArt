@@ -22,3 +22,15 @@ Install the `websockets` library
 
 
 If necessary, use the last pip, `pip install --upgrade pip`.
+
+To read from the sensors you will need:
+
+    pip install sense-hat
+
+git clone git clone https://github.com/RPi-Distro/RTIMULib/ RTIMU
+  835  git clone https://github.com/RPi-Distro/RTIMULib/ RTIMU
+    836  cd RTIMU/Linux/python/
+      837  python setup.py build
+        838  python setup.py install
+	
+
