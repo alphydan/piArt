@@ -48,18 +48,18 @@ async def time(websocket, path):
         
         sense_dict = {
 
-            'humi': hu_pi,
-            'temp': te_pi,
-            'pres': pe_pi,
-            'roll': ro_pi,
-            'pitch': pit_pi,
-             'yaw': yaw_pi,
-            'accel': t_g,
-            'magn': tmag_pi,
+            "humidity": hu_pi,
+            "temperature": te_pi,
+            "pressure": pe_pi,
+            "roll": ro_pi,
+            "pitch": pit_pi,
+             "yaw": yaw_pi,
+            "acceleration": t_g,
+            "magnet": tmag_pi,
 
             }
         
-        now = str(yaw_pi) # json.dumps(sense_dict)
+        # now = str(yaw_pi)
         now = json.dumps(sense_dict)
         # now = datetime.datetime.utcnow().isoformat() + 'Z'
         await websocket.send(now)
