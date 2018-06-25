@@ -27,10 +27,11 @@ To read from the sensors you will need:
 
     pip install sense-hat
 
-git clone git clone https://github.com/RPi-Distro/RTIMULib/ RTIMU
-  835  git clone https://github.com/RPi-Distro/RTIMULib/ RTIMU
-    836  cd RTIMU/Linux/python/
-      837  python setup.py build
-        838  python setup.py install
+If you get an error with the `RTIMU` library you may need to reinstall it from scratch.  Here's what worked for me.  From the project directory:
+    git clone git clone https://github.com/RPi-Distro/RTIMULib/ RTIMU
+    git clone https://github.com/RPi-Distro/RTIMULib/ RTIMU
+    cd RTIMU/Linux/python/
+    python setup.py build
+    python setup.py install
 	
 
